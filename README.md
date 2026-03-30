@@ -1,123 +1,47 @@
+# Tattoo App AR
 
-# Tattoo AR Studio
+Tattoo App AR is a Flutter app for tattoo discovery, style exploration, body-region selection, scheduling and visual tattoo simulation.
 
-**Tattoo AR Studio** é um aplicativo móvel que permite aos usuários **visualizar tatuagens em tempo real usando realidade aumentada (AR)**, explorar estilos de tatuagem, selecionar regiões do corpo e agendar serviços em estúdios parceiros. Também inclui uma **loja de piercings** e uma galeria de trabalhos inspiradores.
+## Main features
 
----
+- visual tattoo simulation with move, zoom and rotation gestures
+- screenshot capture of the preview
+- gallery and featured work showcase
+- style and body-region filtering
+- scheduling flow
+- login and registration flow
+- simple piercing showcase
 
-## 📱 Funcionalidades Principais
+## Current state
 
-* **Simulação AR de tatuagens**
+- the AR screen is currently a visual simulation based on image overlay
+- real camera-based AR is not integrated yet
+- the repository is positioned as a strong product demo with room for future AR depth
 
-  * Posicione, redimensione e rotacione tatuagens virtualmente no corpo usando a câmera do dispositivo.
-  * Captura de screenshots para compartilhar ou salvar localmente.
+## Stack
 
-* **Exploração de estilos de tatuagem**
+- Flutter
+- Dart
+- Material Design
 
-  * Navegue por diferentes estilos: Realismo, Fineline, Old School, Neotradicional, Blackwork, Aquarela, Tribal e Minimal.
-
-* **Seleção de regiões do corpo**
-
-  * Escolha áreas do corpo para simular a tatuagem: braço, perna, costas, peito, rosto, entre outras.
-
-* **Agendamento de serviços**
-
-  * Escolha data e horário para reservar sessões no estúdio.
-  * Interface simples e intuitiva via `BottomSheet`.
-
-* **Galeria de trabalhos**
-
-  * Inspiração com imagens de tatuagens reais.
-  * Visualização detalhada e opção de agendar a tatuagem diretamente a partir da galeria.
-
-* **Loja de piercings**
-
-  * Exibição de produtos, preços e imagens.
-  * Adicionar produtos ao carrinho com feedback visual.
-
----
-
-## 🛠 Tecnologias Utilizadas
-
-* **Flutter & Dart**: framework multiplataforma para Android e iOS.
-* **AR Simulation**: implementação própria para overlay de tatuagens com gestos (zoom, arrastar e girar).
-* **Camera / Screenshot**: integração com câmera para preview em AR e captura de imagens.
-* **Widgets personalizados**: ListViews horizontais, GridViews e PageViews para galerias e seletores.
-* **Gerenciamento de estado**: `setState` para pequenas interações; pronto para integrar soluções mais avançadas.
-
----
-
-## 🎨 Estrutura do App
-
-* **HomePage**: Tela principal com cabeçalho, carousel de trabalhos, seletores de estilos e regiões, loja de piercings e galeria completa.
-* **ARSimulatorScreen**: Tela de simulação AR para testar tatuagens virtualmente.
-* **BottomSheet de agendamento**: Permite ao usuário escolher data e hora da sessão.
-
----
-
-## 🚀 Instalação e Execução
-
-1. Clone o repositório:
+## Run locally
 
 ```bash
-git clone https://github.com/seu-usuario/tattoo-ar-studio.git
-```
-
-2. Navegue até o diretório do projeto:
-
-```bash
-cd tattoo-ar-studio
-```
-
-3. Instale dependências:
-
-```bash
+cd tatuagem_app
 flutter pub get
-```
-
-4. Execute o app:
-
-```bash
 flutter run
 ```
 
-> Compatível com dispositivos Android e iOS. Para AR completo, a câmera precisa estar disponível.
+## Quality commands
 
----
-
-## 📂 Estrutura de Pastas
-
-```
-lib/
-├── main.dart                 # Entry point do app
-├── routes/
-│   └── app_routes.dart       # Rotas centralizadas
-├── presentation/
-│   └── screens/
-│       ├── home_page.dart
-│       └── ar_simulator_screen.dart
-├── widgets/                  # Widgets reutilizáveis
-└── models/                   # Modelos de dados (tatuagens, piercings)
+```bash
+flutter analyze
+flutter test
 ```
 
----
+## Next upgrades
 
-## 🤝 Contribuição
-
-Contribuições são bem-vindas!
-
-* Faça um fork do projeto
-* Crie uma branch (`git checkout -b feature/nova-funcionalidade`)
-* Faça commit das suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
-* Envie para o repositório (`git push origin feature/nova-funcionalidade`)
-* Abra um Pull Request
-
----
-
-## 📄 Licença
-
-MIT License – consulte o arquivo LICENSE para mais detalhes.
-
----
-
-Created by Maurício H.N.Silva Destiny7 Softwares 2025.
+1. integrate camera-driven AR
+2. improve booking and artist profile flows
+3. strengthen image catalog and filtering experience
+4. add persistence and richer appointment management
